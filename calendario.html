@@ -2,14 +2,29 @@
 <html lang="es">
 <head>
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
-    
+        var modalEl = document.getElementById('eventoModal');
+        var diaSeleccionadoEl = document.getElementById('diaSeleccionado');
+            
         var calendar = new FullCalendar.Calendar(calendarEl, {
+          dateClick: function(info) {
+          $(modalEl).modal('show'); // Abre el modal al hacer clic en un día
+          var fechaSeleccionada = new Date(info.dateStr);
+          var dia = fechaSeleccionada.getDate();
+          var mes = fechaSeleccionada.getMonth() + 1; // Los meses en JavaScript comienzan desde 0
+          var anio = fechaSeleccionada.getFullYear();
+
+          // Formatear la fecha seleccionada como "d-m-a"
+          var fechaFormateada = dia + '-' + mes + '-' + anio;
+          // Mostrar el día seleccionado en el modal
+        diaSeleccionadoEl.innerText = 'Fecha Seleccionada: ' + fechaFormateada;
+
+
+          },
           initialView: 'dayGridMonth',
-          
           headerToolbar: {
             left: 'prev,next today',
             center: 'title',
@@ -110,11 +125,88 @@
       </nav>
   </div>
 
+
+<!-- Modal Alta reserva -->
+<div class="modal fade" id="eventoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-center">
+        <h1 class="modal-title display-6 text-center" id="exampleModalLabel">Gestión de la Reserva</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        <form>
+          <div class="m-1">
+            <p id="diaSeleccionado" class="text-center"></p>
+        </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="recipient-name" placeholder="Buscar Cliente">
+          </div>
+          <div class="mb-3">
+            <select class="form-select cancha" >
+              <option selected>Selecciona Cancha</option>
+              <option value="1">Grande</option>
+              <option value="2">Mediana</option>
+              <option value="3">Chica</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <select class="form-select horario" >
+              <option selected>Selecciona Horario</option>
+              <option value="1">10:00</option>
+              <option value="2">11:00</option>
+              <option value="3">12:00</option>
+              <option value="4">13:00</option>
+              <option value="5">14:00</option>
+              <option value="6">15:00</option>
+              <option value="7">16:00</option>
+              <option value="8">17:00</option>
+              <option value="9">18:00</option>
+              <option value="10">19:00</option>
+              <option value="11">20:00</option>
+              <option value="12">21:00</option>
+              <option value="13">22:00</option>
+              <option value="14">23:00</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <select class="form-select estadoDePago" >
+              <option selected>Selecciona estado de pago</option>
+              <option value="1">Total</option>
+              <option value="2">Seña</option>
+              <option value="3">Impago</option>
+          </select>
+          </div>
+          <div class="mb-3">
+            <input type="number" class="form-control" id="recipient-name" placeholder="Ingrese monto">
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" id="message-text" placeholder="Ingrese Observaciones"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-dark">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <body>
   <div class="container">
     <div id='calendar'></div>
   </div>
   
+
+
+
+
+
   
     
 </body>
