@@ -31,7 +31,39 @@
           });
 
         var calendar = new FullCalendar.Calendar(calendarEl, {selectable: true, // Habilita la selección de fechas
-
+          events: [
+            {
+              title  : 'Grande:16:00',
+              start  : '2023-05-23',
+              color: 'green',
+            },
+            {
+              title  : 'Grande:18:00hs',
+              start  : '2023-05-23',
+              color: 'green',
+            },
+            {
+              title  : 'Grande:18:00hs',
+              start  : '2023-05-23',
+              color: 'green',
+            },
+        
+            {
+              title  : 'Chica: 20:00',
+              start  : '2023-05-24',
+              color: 'green',
+            },
+            {
+              title  : 'Chica: 20:00',
+              start  : '2023-05-26',
+              color: 'green',
+            },
+            {
+              title  : 'Chica: 20:00',
+              start  : '2023-05-29',
+              color: 'green',
+            },
+          ],
           dateClick: function(info){
             var today = new Date();
             console.log(today);
@@ -137,13 +169,8 @@
                  Reportes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Concurrencia días y Horarios</a></li>
-                  <li><a class="dropdown-item" href="#">Reservas de Canchas y formas de pago</a></li>
-                  <li><a class="dropdown-item" href="#">Cliente deudor</a></li>
-                  <li><a class="dropdown-item" href="#">Cliente concurrentes</a></li>
-                  <li><a class="dropdown-item" href="#">Estado de pagos</a></li>
+                  <li><a class="dropdown-item" href="#">Estado de pagos de Reservas</a></li>
                   <li><a class="dropdown-item" href="#">Recaudación</a></li>
-                  <li><a class="dropdown-item" href="#">Clientes Registrados</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -239,7 +266,12 @@
             <div class="modal-body">
 
               <div id="consultaReserva" class="modal-window">
-                
+                <select class="form-select mb-3" aria-label="Default select example">
+                  <option selected>Filtra por Cancha</option>
+                  <option value="1">Grande</option>
+                  <option value="2">Mediana</option>
+                  <option value="3">Chica</option>
+                </select>
                 <form>
 
                 <table class="table table-hover form-control mb-3">
@@ -338,7 +370,7 @@
 
 <body>
   <div class="container">
-    <div class="row col-8">
+    <div class="row col-12">
       <div id='calendar'></div>
     </div>
     

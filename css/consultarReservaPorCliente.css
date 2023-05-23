@@ -33,3 +33,17 @@ button{
 .form-select {
     margin-top: 25px;
 }
+#fecha_desde{
+    margin-left:5px ;
+}
+#fecha_hasta{
+    margin-left:5px ;
+}
+#fechaD{
+    margin-top: 20px;
+}
+#fechaH{
+    margin-top: 20px;
+}
+
+

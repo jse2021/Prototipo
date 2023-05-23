@@ -65,13 +65,8 @@
                    Reportes
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Concurrencia días y Horarios</a></li>
-                    <li><a class="dropdown-item" href="#">Reservas de Canchas y formas de pago</a></li>
-                    <li><a class="dropdown-item" href="#">Cliente deudor</a></li>
-                    <li><a class="dropdown-item" href="#">Cliente concurrentes</a></li>
-                    <li><a class="dropdown-item" href="#">Estado de pagos</a></li>
+                    <li><a class="dropdown-item" href="#">Estado de pagos de Reservas</a></li>
                     <li><a class="dropdown-item" href="#">Recaudación</a></li>
-                    <li><a class="dropdown-item" href="#">Clientes Registrados</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -91,18 +86,22 @@
                   <div class="controls col">
                     <input class="form-control" type="text" id="cliente" name="_username"  placeholder="Buscar Cliente"/>
                   </div>
-
-                  <div class="row">
-                    <div class="controls col-6">
-                      <label for="form-control">Fecha Inicio</label>
-                      <input class="form-control" type="date" id="fecha" name="_username"/>
-                    </div>
-                    <div class="controls col-6 mx-auto">
-                      <label for="form-control">Fecha Fin</label>
-                      <input class="form-control" type="date" id="fecha" name="_username"/>
-                    </div>
-
-                  </div>
+      <div class="container">
+        <div class="row">
+            <div class="controls col-6 d-flex align-items-center justify-content-center">
+                <label for="form-control" id="fechaD">Desde</label>
+                <input class="form-control" type="date" id="fecha_desde" placeholder="Selecciona una fecha"/>
+            </div>
+            <div class="controls col-6 d-flex align-items-center justify-content-center">
+                <label for="form-control"id="fechaH">Hasta</label>
+                <input class="form-control" type="date" id="fecha_hasta"  placeholder="Selecciona una fecha"/>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button id="btnGuardar" type="button" class="btn btn-dark">Buscar</button>
+            </div>
+        </div>
+      </div>
+  
                   
 
 
@@ -112,14 +111,41 @@
                 <table class="table table-hover">
                     <thead>
                       <tr>                        
-                        <th scope="col">Nombre de Cancha</th>
-                        <th scope="col">Medidas</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Horario</th>
+                        <th scope="col">Cancha</th>
+                        <th scope="col">E.Pago</th>
+                        <th scope="col">Observaciones</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Bombonera</td>
-                        <td>20x10</td>
+                        <td>25/05/2023</td>
+                        <td>16:00</td>
+                        <td>Grande</td>
+                        <td>Pago</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="display-8" href="#">Eliminar</a></td>
+                        <td><a class="display-8" href="#">Modificar</a></td>
+                      </tr>
+                      <tr>
+                        <td>29/05/2023</td>
+                        <td>11:00</td>
+                        <td>Mediana</td>
+                        <td>Seña</td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="display-8" href="#">Eliminar</a></td>
+                        <td><a class="display-8" href="#">Modificar</a></td>
+                      </tr>
+                      <tr>
+                        <td>05/06/2023</td>
+                        <td>18:00</td>
+                        <td>Grande</td>
+                        <td>Impago</td>
+                        <td></td>
+                        <td></td>
                         <td><a class="display-8" href="#">Eliminar</a></td>
                         <td><a class="display-8" href="#">Modificar</a></td>
                       </tr>
