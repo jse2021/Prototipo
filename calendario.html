@@ -100,8 +100,8 @@
                  Gestion Reservas
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="alta cliente.html">Consultar Reservas por Cliente</a></li>
-                  <li><a class="dropdown-item" href="consulta cliente.html">Consultar Reservas por Cancha</a></li>
+                  <li><a class="dropdown-item" href="consultarReservaPorCliente.html">Consultar Reservas por Cliente</a></li>
+                      <!-- <li><a class="dropdown-item" href="consulta cliente.html">Consultar Reservas por Cancha</a></li> -->
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -173,7 +173,7 @@
                 <a class="nav-link" id="altaReservaBtn" href="#">Alta Reserva</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="consultaReservaBtn" href="#">Consultar Reservas</a>
+                <a class="nav-link" id="consultaReservaBtn" href="#">Consultar Reservas de la Fecha</a>
               </li>
             </ul>
           </div>
@@ -237,12 +237,10 @@
 <!-- modal consultar reserva  -->
 
             <div class="modal-body">
-              <div id="consultaReserva" class="modal-window">
-                <form>
-                  <div class="m-1">
-                    <p id="diaSeleccionado" class="text-center"></p>
-                </div>
 
+              <div id="consultaReserva" class="modal-window">
+                
+                <form>
 
                 <table class="table table-hover form-control mb-3">
                   <thead>
@@ -341,7 +339,7 @@
 <body>
   <div class="container">
     <div class="row col-8">
-      <div id='calendar'class="fc-dark"></div>
+      <div id='calendar'></div>
     </div>
     
   </div>
