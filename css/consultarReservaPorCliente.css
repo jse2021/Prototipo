@@ -1,5 +1,5 @@
 .x {
-    width: 70%;
+    width: 80%;
     height: 610px;
      margin-top: 50px; 
      margin-left: 200px;
@@ -9,6 +9,9 @@
     border-radius: 20px;
     margin-bottom: 20px;
 } 
+.div.modal-content, div.modal-body,table table-hover {
+    width: 110%;
+}
 .form-control {
     margin-left: 25%;
     margin-top: 25px;
