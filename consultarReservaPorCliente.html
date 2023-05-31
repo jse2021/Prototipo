@@ -4,16 +4,17 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       let btnR = document.getElementById('btnCli');
+      let btnLupa = document.getElementById("btnBuscarCliente");
+      let cliente = document.getElementById("cliente")
 
-       $("#consultaClienteModal").hide();
-
-        $(btnBuscarCliente).click(function() {
-          // $("#btnGuardar").show();
-          $("#consultaClienteModal").show();
+       $("#buscarCliente").hide();
+        $(btnLupa).click(function() {
+          $("#buscarCliente").show();
         });
 
-      $(btnR).click(function() {
-          $("#consultaClienteModal").hide();
+        // uso el input porque me lleva a otra ruta el seleccionar
+      $(cliente).click(function() {
+          $("#buscarCliente").hide();
         });
     });
   </script>
@@ -107,9 +108,45 @@
                      <div class="mb-10 row">
                     <div class="col-12 d-flex align-items-center">
                       <input class="form-control" type="text" id="cliente" name="_username"  placeholder="Buscar Cliente"/>
-                      <i class="fa-sharp fa-solid fa-magnifying-glass m-3" id="btnBuscarCliente"></i>
+                        <i class="fa-sharp fa-solid fa-magnifying-glass m-3" id="btnBuscarCliente"></i>
                     </div>
-
+                        <!-- modal consultar cliente  -->
+                        <div class="modal-dialog col-8" id="buscarCliente">
+                          <div class="modal-content">
+                          <div class="modal-body">
+                            <div  class="modal-window">
+                              <form>
+                                  <div class="mb-3 row ">
+                                    <table class="table table-hover">
+                                      <thead>
+                                        <tr>  
+                                          <th scope="col">DNI</th>
+                                          <th scope="col">Nombre</th>
+                                          <th scope="col">Apellido</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>37909102</td>
+                                          <td>Jose</td>
+                                          <td>Maldonado</td>
+                                          <td><button class="btn btn-outline-dark">Seleccionar</button></td>
+                                        </tr>
+                                        <tr>
+                                          <td>36987444</td>
+                                          <td>Ariel</td>
+                                          <td>Maldonado</td>
+                                          <td class="m-200"><button id="btnSeleccionar" class="btn btn-outline-dark">Seleccionar</button></td>
+                                        </tr>
+                                        
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </form>
+                          </div>
+                          </div>
+                        </div>
+                  </div>
       <div class="container">
         <div class="row">
             <div class="controls col-6 d-flex align-items-center justify-content-center">

@@ -11,6 +11,8 @@
 } 
 .div.modal-content, div.modal-body,table table-hover {
     width: 110%;
+    padding-left: 40px;
+    padding-right: 60px;
 }
 .form-control {
     margin-left: 25%;
@@ -21,7 +23,7 @@
 #titulo{
     margin-top: 20px;
 }
-button{
+#btnGuardar{
     margin-top: 10px;
     width: 50%;
     margin-left: 25%;
