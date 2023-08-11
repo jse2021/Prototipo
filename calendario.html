@@ -194,6 +194,16 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="consultaEpagoReservas.html">Estado de pagos de Reservas</a></li>
                   <li><a class="dropdown-item" href="recaudacion.html">Recaudación</a></li>
+                  <li><a class="dropdown-item" href="recaudacionPorDia.html">Recaudación del Día</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Configuración
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="precioTotal.html">Cambiar precio total</a></li>
+                  <li><a class="dropdown-item" href="señaCancha.html">Cambiar precio de Seña</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -319,8 +329,20 @@
                   <option value="3">Impago</option>
               </select>
               </div>
-              <div class="mb-3">
-                <input type="number" class="form-control" id="recipient-name" placeholder="Ingrese monto">
+
+              <div class="row">
+                <div class="mb-3 col-8">
+                  <input type="number" class="form-control" id="recipient-name" placeholder="Ingrese monto">
+                </div>
+                <div class="mb-3 col-4">
+                  <select class="form-select estadoDePago" >
+                    <option selected>Selecciona forma de pago</option>
+                    <option value="1">Tarjeta</option>
+                    <option value="2">Débito</option>
+                    <option value="3">Efectivo</option>
+                    <option value="4">Transferencia</option>
+                </select>
+                </div>
               </div>
 
               <div class="mb-3">
@@ -371,51 +393,17 @@
                         <td><a class="display-8" href="#">Eliminar</a></td>
                         <td><a class="display-8" href="#">Modificar</a></td>
                       </tr>
-                      <tr>
+                       <tr>
                         <td>Montesinos Cristian</td>
-                        <td>21:00</td>
+                        <td>22:00</td>
                         <td>Grande</td>
                         <td>Total</td>
                         <td>Les falta jugadores</td>
                         <td><a class="display-8" href="#">Eliminar</a></td>
                         <td><a class="display-8" href="#">Modificar</a></td>
                       </tr>
-                      <tr>
-                        <td>Montesinos Cristian</td>
-                        <td>21:00</td>
-                        <td>Grande</td>
-                        <td>Total</td>
-                        <td>Les falta jugadores</td>
-                        <td><a class="display-8" href="#">Eliminar</a></td>
-                        <td><a class="display-8" href="#">Modificar</a></td>
-                      </tr>
-                      <tr>
-                        <td>Montesinos Cristian</td>
-                        <td>21:00</td>
-                        <td>Grande</td>
-                        <td>Total</td>
-                        <td>Les falta jugadores</td>
-                        <td><a class="display-8" href="#">Eliminar</a></td>
-                        <td><a class="display-8" href="#">Modificar</a></td>
-                      </tr>
-                      <tr>
-                        <td>Montesinos Cristian</td>
-                        <td>21:00</td>
-                        <td>Grande</td>
-                        <td>Total</td>
-                        <td>Les falta jugadores</td>
-                        <td><a class="display-8" href="#">Eliminar</a></td>
-                        <td><a class="display-8" href="#">Modificar</a></td>
-                      </tr>
-                      <tr>
-                        <td>Montesinos Cristian</td>
-                        <td>21:00</td>
-                        <td>Grande</td>
-                        <td>Total</td>
-                        <td>Les falta jugadores</td>
-                        <td><a class="display-8" href="#">Eliminar</a></td>
-                        <td><a class="display-8" href="#">Modificar</a></td>
-                      </tr>                 
+                   
+                                    
                     </tbody>
                   </table>
 
