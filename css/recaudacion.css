@@ -34,21 +34,18 @@ button{
     margin-top: 25px;
     margin-left: 5px;
 }
-#fecha_desde{
-    margin-left:5px ;
-    margin-left:5px ;
+#fecha_elegir{
+    margin-left:30px ;
+    margin-left: 10%;
 }
-#fecha_hasta{
-    margin-left:5px ;
-    margin-left:5px ;
-}
+
 #fechaD{
     margin-top: 20px;
-    margin-left:5px ;
+    margin-left: 25%;
 }
 #fechaH{
     margin-top: 20px;
-    margin-left:5px ;
+    margin-left:25px ;
 }
 #formaP{
     margin-top: 20px;

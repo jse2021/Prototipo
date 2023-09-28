@@ -1,0 +1,23 @@
+dukascopy : para transferir a ninjatrader
+Empresas de fondeo: empresas que te permiten operar y arriesgar
+500 dls sin arriesgar, sino lo arriesgan ellos. 
+hacer la prueba de fondeo: se paga. No es recomendable.
+o comprar la cuenta fondeada: recomendable simular prueba de fondeo en swicet, luego comprar una cuenta fondeada. 
+hay cuentas de 25 mil o mas o menos dolares. Y operar con ello. 
+hay empresas que te dan 80% de ganancia o menos. 
+
+Opciones binarias: broker para opearar: IQ a partir de
+10$ - QUOTEX : apartir de 50$.
+Opciones: forma de hacer trading, hay sobre indices, criptos,
+divisas.. tienen la particularidad de que sabes cuanto podes
+ganar o perder con anticipacion.
+
+bullticks:
+impulso: a favor de la tendencia (graf 1)
+Volumen: con el volumen determinas si hay oferta, demanda, si un quiebre tiene fuerza o no, si es falso o no
+macd: indicador para ver la fuerza del impulso para buscar divergencias.
+
+bullticks: 
+ * grafico: prolijo
+ * divergencia de macd: se da cuando tenemos minimos descendentes o monimos iguales y el macd marca maximos descdentes. Cuando tenemos esto quiere decir de que el precio si romple el ultimo maxcimo, tenagmos impulso alcista
+ * 
