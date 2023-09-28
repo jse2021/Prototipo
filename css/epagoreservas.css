@@ -18,3 +18,27 @@
 #titulo{
     margin-top: 50px;
 }
+#fecha_desde{
+    margin-left:5px ;
+    margin-left:5px ;
+}
+#fecha_hasta{
+    margin-left:5px ;
+    margin-left:5px ;
+}
+#fechaD{
+    margin-top: 35px;
+    margin-left:25px ;
+}
+#fechaH{
+    margin-top: 20px;
+    margin-left:20px ;
+}
+#formaP{
+    margin-top: 35px;
+    margin-left:25px ;
+}
+.form-select {
+    margin-top: 35px;
+    margin-left: 15px;
+}
