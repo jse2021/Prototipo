@@ -35,8 +35,8 @@ button{
     margin-left: 5px;
 }
 #fecha_desde{
-    margin-left:5px ;
-    margin-left:5px ;
+    margin-left:10px ;
+    /* margin-left:5px ; */
 }
 #fecha_hasta{
     margin-left:5px ;
@@ -44,7 +44,7 @@ button{
 }
 #fechaD{
     margin-top: 20px;
-    margin-left:25px ;
+    margin-left:40px ;
 }
 #fechaH{
     margin-top: 20px;
