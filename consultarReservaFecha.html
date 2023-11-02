@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/consultaPorFecha.css" rel="stylesheet"/>
+    <style>
+      #precio{
+        margin-top: 1px;
+        margin-right: 10px;
+        padding-right: 30px;
+      }
+      #select{
+        margin-left: 60px;
+      }
+      #btn{
+        margin-top: 20px;
+      }
+    </style>
+    <title>Consultar reserva por fecha</title>
+</head>
+<body>
+
+  
+    <div class="container-fluid navbar-dark bg-dark d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">SGR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="calendario.html">Calendario</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Gestion Reservas
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="consultarReservaPorCliente.html">Consultar Reservas por Cliente</a></li>
+                      <li><a class="dropdown-item" href="consultarReservaFecha.html">Consultar Reservas de la fecha</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Gestion Cliente
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="alta cliente.html">Alta de Cliente</a></li>
+                    <li><a class="dropdown-item" href="consulta cliente.html">Consultar Cliente</a></li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Gestion Cancha
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="alta cancha.html">Alta de Cancha</a></li>
+                    <li><a class="dropdown-item" href="consultar cancha.html">Consultar Cancha</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Gestion Usuario
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="alta usuario.html">Alta de Cancha</a></li>
+                    <li><a class="dropdown-item" href="consultar usuario.html">Consultar Usuario</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Reportes
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="consultaEpagoReservas.html">Estado de pagos de Reservas</a></li>
+                    <li><a class="dropdown-item" href="recaudacion.html">Recaudación</a></li>
+                    <li><a class="dropdown-item" href="recaudacionPorDia.html">Formas de Pago</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Configuración
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="precioTotal.html">Precio de la Cancha</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Salir</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+    <h1 id="titulo"class="display-4 text-center">Consultar Reservas por fecha</h1>
+    <div class="container">
+       <div class="row x ">
+        <div class="controls d-flex align-items-center justify-content-center p-0">
+          <label for="form-control" id="fechaD">Fecha</label>
+          <input class="form-control" type="date" id="fecha" />
+      </div>
+        <div id="consultaReserva" class="modal-window">
+          <select class="form-select mb-3" aria-label="Default select example">
+            <option selected>Filtra por Cancha</option>
+            <option value="1">Grande</option>
+            <option value="2">Mediana</option>
+            <option value="3">Chica</option>
+          </select>
+          <form>
+
+          <table class="table table-hover form-control mb-3">
+            <thead>
+              <tr>
+                
+                <th scope="col">Cliente</th>
+                <th scope="col">Horario</th>
+                <th scope="col">Cancha</th>
+                <th scope="col">E. Pago</th>
+                <th scope="col">Forma de Pago</th>
+                <th scope="col">Observaciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maldonado Jose</td>
+                <td>16:00</td>
+                <td>Mediana</td>
+                <td>Total</td>
+                <td>Efectivo</td>
+                <td>Asistiran 5 min tarde</td>
+                <td><a class="display-8" href="#">Eliminar</a></td>
+                <td><a class="display-8" href="#">Modificar</a></td>
+              </tr>
+              <tr>
+                <td>Sandez Ariel</td>
+                <td>19:00</td>
+                <td>Mediana</td>
+                <td>Seña</td>
+                <td>Efectivo</td>
+                <td>Debe 4.500</td>
+                <td><a class="display-8" href="#">Eliminar</a></td>
+                <td><a class="display-8" href="#">Modificar</a></td>
+              </tr>
+               <tr>
+                <td>Montesinos Cristian</td>
+                <td>22:00</td>
+                <td>Mediana</td>
+                <td>Total</td>
+                <td>Transferencia</td>
+                <td>Les falta jugadores</td>
+                <td><a class="display-8" href="#">Eliminar</a></td>
+                <td><a class="display-8" href="#">Modificar</a></td>
+              </tr>
+           
+                            
+            </tbody>
+          </table>
+
+          </form>
+        
+    </div>
+<script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>  
+   
+</body>
+</html>

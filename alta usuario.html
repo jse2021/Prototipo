@@ -29,7 +29,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="consultarReservaPorCliente.html">Consultar Reservas por Cliente</a></li>
-                      <!-- <li><a class="dropdown-item" href="consulta cliente.html">Consultar Reservas por Cancha</a></li> -->
+                      <li><a class="dropdown-item" href="consultarReservaFecha.html">Consultar Reservas de la fecha</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -75,8 +75,7 @@
                    Configuración
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="precioTotal.html">Cambiar precio total</a></li>
-                    <li><a class="dropdown-item" href="señaCancha.html">Cambiar precio de Seña</a></li>
+                    <li><a class="dropdown-item" href="precioTotal.html">Precio de la Cancha</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -100,16 +99,15 @@
                     <input class="form-control" type="email" id="email" name="_username"  placeholder="Email"/>
                     <input class="form-control" type="text" id="celular" name="_username"  placeholder="Usuario"/>
                     <input class="form-control" type="password" id="clave" name="_username"  placeholder="Clave"/>
-                    <input class="form-control" type="password" id="c_clave" name="_username"  placeholder="Confirmar Clave"/>
                     <select class="form-select user" >
                         <option selected>Tipo de Usuario</option>
                         <option value="1">Estandar</option>
-                        <option value="2">Super Usuario</option>
+                        <option value="2">Administrador</option>
                       </select>
 
                   </div>
                 </div>
-                <button class="btn btn-dark" type="submit">Guardar</button>
+                <button class="btn btn-dark" type="submit" id="btnSubmitUsuario">Guardar</button>
             </form>
         </div>
 </div>

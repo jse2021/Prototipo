@@ -156,7 +156,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="consultarReservaPorCliente.html">Consultar Reservas por Cliente</a></li>
-                      <!-- <li><a class="dropdown-item" href="consulta cliente.html">Consultar Reservas por Cancha</a></li> -->
+                    <li><a class="dropdown-item" href="consultarReservaFecha.html">Consultar Reservas de la fecha</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -202,8 +202,7 @@
                  Configuración
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="precioTotal.html">Cambiar precio total</a></li>
-                  <li><a class="dropdown-item" href="señaCancha.html">Cambiar precio de Seña</a></li>
+                  <li><a class="dropdown-item" href="precioTotal.html">Precio de la Cancha</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -226,18 +225,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center text-center">
-          <div class="container-fluid justify-content-center text-center">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" id="altaReservaBtn" href="#">Alta Reserva</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="consultaReservaBtn" href="#">Consultar Reservas de la Fecha</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+
 
         <!-- Modal Alta Reserva -->
       <div class="modal-body">
@@ -248,11 +236,12 @@
             </div>
 
               <div class="mb-3 row">
-                <div class="col-11">
-                  <input type="text" class="form-control" id="recipient-name" placeholder="Buscar Cliente">
+                <div class="col-12">
+                  <input type="text" class="form-control" id="" placeholder="Buscar Cliente">
                 </div>
+                <!-- <i class="fa-sharp fa-solid fa-magnifying-glass" id="btnBuscarCliente"></i> -->
                 <div class="col-1 d-flex align-items-center">
-                  <i class="fa-sharp fa-solid fa-magnifying-glass" id="btnBuscarCliente"></i>
+                  
                 </div>
                     <!-- modal consultar cliente  -->
                   <div class="modal-dialog col-8" id="consultaClienteModal">
@@ -275,13 +264,13 @@
                                       <td>37909102</td>
                                       <td>Jose</td>
                                       <td>Maldonado</td>
-                                      <td><button class="btn btn-outline-dark">Seleccionar</button></td>
+                                      
                                     </tr>
                                     <tr>
                                       <td>36987444</td>
                                       <td>Ariel</td>
                                       <td>Maldonado</td>
-                                      <td><button id="btnCli" class="btn btn-outline-dark">Seleccionar</button></td>
+                                      
                                     </tr>
                      
                                   </tbody>
@@ -350,67 +339,6 @@
               </div>
             </form>
         </div>
-<!-- modal consultar reserva  -->
-
-            <div class="modal-body">
-
-                <div id="consultaReserva" class="modal-window">
-                  <select class="form-select mb-3" aria-label="Default select example">
-                    <option selected>Filtra por Cancha</option>
-                    <option value="1">Grande</option>
-                    <option value="2">Mediana</option>
-                    <option value="3">Chica</option>
-                  </select>
-                  <form>
-
-                  <table class="table table-hover form-control mb-3">
-                    <thead>
-                      <tr>
-                        
-                        <th scope="col">Cliente</th>
-                        <th scope="col">Horario</th>
-                        <th scope="col">Cancha</th>
-                        <th scope="col">E. Pago</th>
-                        <th scope="col">Observaciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Maldonado Jose</td>
-                        <td>16:00</td>
-                        <td>Mediana</td>
-                        <td>Total</td>
-                        <td>Asistiran 5 min tarde</td>
-                        <td><a class="display-8" href="#">Eliminar</a></td>
-                        <td><a class="display-8" href="#">Modificar</a></td>
-                      </tr>
-                      <tr>
-                        <td>Sandez Ariel</td>
-                        <td>19:00</td>
-                        <td>Mediana</td>
-                        <td>Seña</td>
-                        <td>Debe 4.500</td>
-                        <td><a class="display-8" href="#">Eliminar</a></td>
-                        <td><a class="display-8" href="#">Modificar</a></td>
-                      </tr>
-                       <tr>
-                        <td>Montesinos Cristian</td>
-                        <td>22:00</td>
-                        <td>Grande</td>
-                        <td>Total</td>
-                        <td>Les falta jugadores</td>
-                        <td><a class="display-8" href="#">Eliminar</a></td>
-                        <td><a class="display-8" href="#">Modificar</a></td>
-                      </tr>
-                   
-                                    
-                    </tbody>
-                  </table>
-
-                  </form>
-                </div>
-            </div>
-            <!-- fin consulta reserva -->
            
             <div class="modal-footer d-flex justify-content-center">
               <button id="btnGuardar" type="button" class="btn btn-dark">Guardar</button>

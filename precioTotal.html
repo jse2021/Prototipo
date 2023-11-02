@@ -8,15 +8,19 @@
     <link href="css/precioCancha.css" rel="stylesheet"/>
     <style>
       #precio{
-        margin-top: 1px;
-        margin-right: 10px;
-        padding-right: 30px;
+        margin-left: 25%;
+        margin-top: 1%;
+
+      }
+      #sena{
+        margin-left: 25%;
+        margin-top: 1%;
       }
       #select{
-        margin-left: 60px;
+        margin-left: 1%;
       }
       #btn{
-        margin-top: 20px;
+        margin-top: 1%;
       }
     </style>
     <title>Precio Cancha</title>
@@ -42,7 +46,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="consultarReservaPorCliente.html">Consultar Reservas por Cliente</a></li>
-                      <!-- <li><a class="dropdown-item" href="consulta cliente.html">Consultar Reservas por Cancha</a></li> -->
+                      <li><a class="dropdown-item" href="consultarReservaFecha.html">Consultar Reservas de la fecha</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -88,8 +92,7 @@
                    Configuración
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="precioTotal.html">Cambiar precio total</a></li>
-                    <li><a class="dropdown-item" href="señaCancha.html">Cambiar precio de Seña</a></li>
+                    <li><a class="dropdown-item" href="precioTotal.html">Precio de la Cancha</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -109,42 +112,19 @@
                 <thead>
                   <tr>
                     <th scope="col">Fecha Modificación</th>
-                    <th scope="col">Cancha Chica</th>
-                    <th scope="col">Cancha Mediana</th>
-                    <th scope="col">Cancha Grande</th>
+                    <th scope="col">Cancha </th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Seña</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>06/07/2023</td>
-                    <td>7500</td>
+                    <td>Grande</td>
                     <td>6500</td>
                     <td>5500</td>
                   </tr>
-                  <tr>
-                    <td>01/06/2023</td>
-                    <td>6500</td>
-                    <td>5500</td>
-                    <td>4500</td>
-                  </tr>
-                  <tr>
-                    <td>16/04/2023</td>
-                    <td>5500</td>
-                    <td>4500</td>
-                    <td>3500</td>
-                  </tr>
-                  <tr>
-                    <td>26/03/2023</td>
-                    <td>4500</td>
-                    <td>3500</td>
-                    <td>2500</td>
-                  </tr>
-                  <tr>
-                    <td>25/01/2023</td>
-                    <td>3500</td>
-                    <td>2500</td>
-                    <td>1500</td>
-                  </tr>
+           
 
 
                  </tbody>
@@ -160,13 +140,19 @@
                         <option value="4">Chica</option>
                       </select>
                     </div>
-                    <div class="col-6 col-sm-6 ">
-                      <input class="form-control" type="number" id="precio"  placeholder="Precio"/>
-                  </div>
+
                 </div>
+                <div class="col-6 col-sm-12 ">
+                  <input class="form-control" type="number" id="precio"  placeholder="Monto Cancha"/>
+              </div>
+              <div class="col-6 col-sm-12 ">
+                <input class="form-control" type="number" id="sena"  placeholder="Monto Seña"/>
+            </div>
               </div>
                 <button class="btn btn-dark" id="btn" type="submit">Guardar</button>
+                <button class="btn btn-dark" id="btn" type="submit">Actualizar</button>
               </div>
+            
 
             </form>
         </div>
